@@ -1,5 +1,5 @@
 {% set name = "mdanalysis-sphinx-theme" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mdanalysis_sphinx_theme-{{ version }}.tar.gz
-  sha256: 301b28338699dd922d7d1fac5f86083f0070955f004c8ab34fb56737bf6c272c
+  sha256: e4c37fb93ec118e0a1e3b68e3ecef723bbd0ec201f6550dcd1f405afc16b4f44
 
 build:
   noarch: python
@@ -26,7 +26,7 @@ requirements:
     - lxml
     - python-slugify
     - sphinx >=6.2.1,<7.0
-    - sphinx_rtd_theme
+    - sphinx_rtd_theme >=1.2
 
 
 test:
