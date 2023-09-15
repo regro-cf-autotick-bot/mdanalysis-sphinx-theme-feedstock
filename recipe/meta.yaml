@@ -1,5 +1,5 @@
 {% set name = "mdanalysis-sphinx-theme" %}
-{% set version = "1.0.1" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mdanalysis_sphinx_theme-{{ version }}.tar.gz
-  sha256: e4c37fb93ec118e0a1e3b68e3ecef723bbd0ec201f6550dcd1f405afc16b4f44
+  sha256: 99c25d9310531f2996a61ad2b06d4ffe5ea8d1e476a851df68c4ff7a50049a87
 
 build:
   noarch: python
