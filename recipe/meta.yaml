@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mdanalysis_sphinx_theme-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mdanalysis_sphinx_theme-{{ version }}.tar.gz
   sha256: 6be9d5bcb7ac20144f39489352af0a9bd283400dd5e7bdfac3a336118421e45f
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - beautifulsoup4
     - css-html-js-minify
     - libsass
@@ -34,6 +34,7 @@ test:
     - mdanalysis_sphinx_theme
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
